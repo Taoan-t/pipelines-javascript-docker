@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: taoantpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taoantpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: taoantpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: taoantpipelinesjavascriptdocker 
+          image: mycontainerregistry1113.azurecr.io/taoantpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
